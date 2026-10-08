@@ -24,6 +24,9 @@ def main(key: str = None):
     if not key:
         print("No key provided, using default key: 24521922")
         key = text_to_bytes("24521922")
+    elif len(key) != 8:
+        print("Key must be exactly 8 characters long. Using default key: 24521922")
+        key = text_to_bytes("24521922")
     else:
         key = text_to_bytes(key)
 
@@ -52,5 +55,5 @@ def main(key: str = None):
 
 
 if __name__ == "__main__":
-    key = input("Enter a key (24521922 / 24521923): ")
+    key = input("Enter a key with exact 8 characters (e.g.: 24521922 / 24521923): ")
     main(key)
