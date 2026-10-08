@@ -1,0 +1,1 @@
+from dependencies import install_dependencies
